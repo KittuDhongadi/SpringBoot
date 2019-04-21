@@ -5,6 +5,8 @@ public class Final_Keyword_Usage {
 	{
 		final int a;
 		System.out.println(a);
+		
+		System.out.println("Hello");
 	}
 
 }
