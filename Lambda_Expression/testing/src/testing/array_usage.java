@@ -14,6 +14,8 @@ public class array_usage {
 		
 		int b[] = {1,2,3,4,5};
 		System.out.println(b.length);
+		
+		//usage of annonymo
 	}
 
 }
