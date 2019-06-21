@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title>Scope of Variable</title>
+		<script type="text/javascript">
+		var car="ABC"
+		
+		document.write("<h2>"+car+"</h2>");
+		
+		var car1 = ["a","b","c"];
+		car1.push("cd");
+		for(var i=0;i<car1.length;i++)
+		{
+			document.write("<h1>"+car1[i]+"</h1>");
+		}
+		
+		
+		function test1()
+		{
+		document.write("<h1>this is function</h1>");
+		}
+		
+		test1();
+
+//objects
+
+/* var run = {
+brand : "abc",
+price : 1234,
+
+test : function()
+{
+document.write("<h1> inside object function</h1>");
+}
+};
+
+document.write("<h6>"+run.brand+"</h6>");
+document.write("<h6>"+run.price+"</h6>");
+ */
+
+function cars(brand,price)
+{
+	 this.brand=brand;
+	this.price=price;
+	this.test1 = function()
+	{
+		document.write("<h1>Inside Function Constructor</h1>");
+	}
+}
+ 
+var c1 = new cars("BAC",12);
+
+c1.test1();
+document.write("<h1>"+c1.brand+"</h1>")
+
+
+function tesla(brand,year,price)
+{
+this.brand=brand;
+this.year=year;
+this.price=price;
+
+this.hello = function()
+{
+	document.write("<h1>Inside tesla</h1>")
+	}
+	
+}
+
+var t = new tesla("t1",2019,1);
+document.write("<h3>"+t.year+"</h3>");
+
+var h1 = {
+		brand1 : "tesla",
+		hello : function()
+		{
+			document.write("<h1>Inside function object</h1>")
+		}
+}
+
+h1.fuel="electric";
+
+document.write("<h1>"+h1.fuel+"</h1>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	</script>
+	</head>
+</html>

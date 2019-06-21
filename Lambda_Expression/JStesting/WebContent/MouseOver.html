@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Mouse Over and Out</title>
+<script type="text/javascript">
+
+function setNewImage()
+{
+	document.getElementById("img1").src = "DSC_2002n.jpg";
+}
+
+function setOldImage()
+{
+	document.getElementById("img1").src = "9E9A7312.JPG8";
+}
+</script>
+</head>
+<body>
+<img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="9E9A7312.JPG" width="900"/>
+</body>
+</html>

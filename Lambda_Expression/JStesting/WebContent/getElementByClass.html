@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>getElementByClass</title>
+<script type="text/javascript">
+
+function fn()
+{
+ var element = document.getElementByClassName("myp");
+ alert("Hello");
+ for(var x=0;x<element.length;x++)
+	 {
+	 element[x].style.color="red";
+	 }
+}
+</script>
+</head>
+<body>
+<p id="p1" class="myp">This is p1</p>
+<p id="p2">This is p2</p>
+<p id="p3">This is p3</p>
+<p id="p4" class="myp">This is p4</p>
+
+<button onclick="fn()">Click me</button>
+</body>
+</html>

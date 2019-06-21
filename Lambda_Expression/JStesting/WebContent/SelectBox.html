@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Select Box</title>
+<script type="text/javascript">
+function fn1()
+{
+var s1 = document.getElementById("select");
+
+alert(s1.options[s1.selectedIndex].value);
+}
+</script>
+</head>
+<body>
+<select id="select">
+<option value="A">A</option>
+<option value="B">B</option>
+<option value="C">C</option>
+</select>
+
+<button onclick="fn1()">Click</button>
+</body>
+</html>
