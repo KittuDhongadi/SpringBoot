@@ -8,16 +8,22 @@
 function Click()
 {
 var str = document.getElementById("text1").value;
+var pswd1 = "Hello";
+var str2 = document.getElementById("text2").value;
 
+if(str2 == pswd1)
 alert("Hello"+str);
-
+else
+alert("Wrong");
 }
 
 </script>
 </head>
 
 <body>
-<input type="text" id="text1" placeholder="Enter Text"/>
+<input type="text" id="text1" placeholder="Username"/>
+<br>
+<input type="text" id="text2" placeholder="Password"/>
 <button onclick="Click()">Click Me</button>
 </body>
 </html>
