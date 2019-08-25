@@ -1,10 +1,31 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope(value="prototype")
 public class Alien {
-	
+	public Alien() {
+		super();
+		System.out.println("Object Created");
+	}
+
 	private int id;
 	private String name;
 	private String Tech;
+	@Autowired
+	@Qualifier("lap")
+	private Laptop laptop;
+	
+	public Laptop getLaptop() {
+		return laptop;
+	}
+	public void setLaptop(Laptop laptop) {
+		this.laptop = laptop;
+	}
 	public int getId() {
 		return id;
 	}
@@ -22,5 +43,11 @@ public class Alien {
 	}
 	public void setTech(String tech) {
 		Tech = tech;
+	}
+	
+	public void show()
+	{
+		System.out.println("In Show!!!");
+		laptop.compile();
 	}
 }
